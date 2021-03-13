@@ -7,25 +7,15 @@ import (
 	"github.com/anonutopia/gowaves"
 )
 
-func initWavesNodeClient() *gowaves.WavesNodeClient {
-	wnc := &gowaves.WavesNodeClient{
-		Host: WavesNodeURL,
-		Port: 80,
-	}
-
-	return wnc
-}
-
 type WavesMonitor struct {
 	StartedTime int64
 }
 
 func (wm *WavesMonitor) start() {
 	wm.StartedTime = time.Now().Unix() * 1000
-	mylog()
 	for {
 		// todo - make sure that everything is ok with 100 here
-		pages, err := wnc.TransactionsAddressLimit(conf.Address, 100)
+		pages, err := gowaves.WNC.TransactionsAddressLimit(conf.Address, 100)
 		if err != nil {
 			log.Println(err)
 		}
@@ -36,7 +26,7 @@ func (wm *WavesMonitor) start() {
 			}
 		}
 
-		time.Sleep(time.Second)
+		time.Sleep(time.Second * WavesMonitorTick)
 	}
 }
 

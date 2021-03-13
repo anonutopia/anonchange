@@ -1,3 +1,5 @@
+github.com/anonutopia/gowaves v1.0.0 h1:z07HiB2AAaqvWD/hNekeAu8FwfCOHpJ8c0fYwZlXkC0=
+github.com/anonutopia/gowaves v1.0.0/go.mod h1:a9TDR4L3Oi2nriNtWZBsCwaeBMu3LRCHj20F2oz5sqA=
 github.com/jinzhu/inflection v1.0.0 h1:K317FqzuhWc8YvSVlFMCCUb36O/S9MCKRDI7QkRKD/E=
 github.com/jinzhu/inflection v1.0.0/go.mod h1:h+uFLlag+Qp1Va5pdKtLDYj+kHp5pxUVkryuEj+Srlc=
 github.com/jinzhu/now v1.1.1 h1:g39TucaRWyV3dwDO++eEc6qf8TVIQ/Da48WmqjZ3i7E=

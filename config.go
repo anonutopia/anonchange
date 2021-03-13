@@ -8,7 +8,9 @@ import (
 
 // Config struct holds all our configuration
 type Config struct {
-	Debug bool `json:"debug"`
+	Debug   bool   `json:"debug"`
+	Address string `json:"address"`
+	Fee     int    `json:"fee"`
 }
 
 // Load method loads configuration file to Config struct

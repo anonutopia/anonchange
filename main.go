@@ -10,6 +10,8 @@ var conf *Config
 
 var db *gorm.DB
 
+var pc *PriceClient
+
 var wm *WavesMonitor
 
 func main() {
@@ -18,6 +20,8 @@ func main() {
 	conf = initConfig()
 
 	db = initDb()
+
+	pc = initPriceClient()
 
 	initWavesMonitor()
 }
